@@ -11,15 +11,15 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
 
   # retrieve the members on their activities
   my @members              = $keyaki->members;             # retrieve all
-  my @active_members       = $keyaki->members('active');
-  my @graduate_members     = $keyaki->members('graduate');
+  my @kanji_members        = $keyaki->members('kanji');
+  my @hiragana_members     = $keyaki->members('hiragana');
   my @at_some_time_members = $keyaki->members(DateTime->now->subtract(years => 5));
 
   # retrieve the members under some conditions
   my @sorted_by_age        = $keyaki->sort('age', 1);
   my @sorted_by_class      = $keyaki->sort('class', 1);
   my @selected_by_age      = $keyaki->select('age', 18, '>=');
-  my @selected_by_class    = $keyaki->select('class', 5, '==');
+  my @selected_by_class    = $keyaki->select('class', 2, '==');
 ```
 
 # DESCRIPTION
@@ -75,7 +75,7 @@ Returns the members sorted by the `$type` field.
 ```
 
 Returns the members satisfy the given `$type` condition. `$operator`
-must be a one of '==', '>=', '<=', '>', and '<'.  
+must be a one of `'==', '>=', '<=', '>', '<'`.
 
 This method compares the given `$type` to the member's one in the order below:
 ```
@@ -86,10 +86,11 @@ This method compares the given `$type` to the member's one in the order below:
 
 * [Keyakizaka46 (Official Site)](http://www.keyakizaka46.com/)
 
+* [Acme::Nogizaka46](http://search.cpan.org/~twogmon/Acme-Nogizaka46-0.3/lib/Acme/Nogizaka46.pm)
+
 # AUTHOR
 
 Okawara Ayato
-
 
 # LICENSE
 

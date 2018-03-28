@@ -143,15 +143,15 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
 
   # retrieve the members on their activities
   my @members              = $keyaki->members;             # retrieve all
-  my @active_members       = $keyaki->members('active');
-  my @graduate_members     = $keyaki->members('graduate');
+  my @kanji_members        = $keyaki->members('kanji');
+  my @hiragana_members     = $keyaki->members('hiragana');
   my @at_some_time_members = $keyaki->members(DateTime->now->subtract(years => 5));
 
   # retrieve the members under some conditions
   my @sorted_by_age        = $keyaki->sort('age', 1);
   my @sorted_by_class      = $keyaki->sort('class', 1);
   my @selected_by_age      = $keyaki->select('age', 18, '>=');
-  my @selected_by_class    = $keyaki->select('class', 5, '==');
+  my @selected_by_class    = $keyaki->select('class', 2, '==');
 
 =head1 DESCRIPTION
 
