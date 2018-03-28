@@ -50,18 +50,18 @@ my @members = qw(
     MihoWatanabe
 );
 
-# my %date_joined = map {
-#     my ($class, $year, $month, $day) = ($_ =~ /(\w+):(\d{4})-(\d{2})-(\d{2})/);
-#     $class => DateTime->new(
+#my %date_joined = map {
+#    my ($class, $year, $month, $day) = ($_ =~ /(\w+):(\d{4})-(\d{2})-(\d{2})/);
+#    $class => DateTime->new(
 #         year  => $year,
 #         month => $month,
 #         day   => $day,
-#     );
-# } qw(
-#     1:2011-08-21
-#     2:2013-05-11
-#     MatsuiRena:2014-02-24
-# );
+#    );
+#} qw(
+#    1:2011-08-21
+#    2:2013-05-11
+#    MatsuiRena:2014-02-24
+#);
 
 sub new {
     my $class = shift;

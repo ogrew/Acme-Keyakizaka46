@@ -44,19 +44,22 @@ sub _initialize {
 
 sub _calculate_age {
     my $self  = shift;
-    my $today = DateTime->today;
+    my $birthday = $self->birthday->format('Ymd');
+    my $today = DateTime->today->format('Ymd');
 
-    if (($today->month - $self->birthday->month) > 0) {
-        return $today->year - $self->birthday->year;
-    } elsif (($today->month - $self->birthday->month) == 0) {
-        if (($today->day - $self->birthday->day  ) >= 0) {
-            return $today->year - $self->birthday->year;
-        } else {
-            return ($today->year - $self->birthday->year) - 1;
-        }
-    } else {
-        return ($today->year - $self->birthday->year) - 1;
-    }
+    return (int)(($today-$birthday)/10000);
+
+#    if (($today->month - $self->birthday->month) > 0) {
+#        return $today->year - $self->birthday->year;
+#    } elsif (($today->month - $self->birthday->month) == 0) {
+#        if (($today->day - $self->birthday->day  ) >= 0) {
+#            return $today->year - $self->birthday->year;
+#        } else {
+#            return ($today->year - $self->birthday->year) - 1;
+#        }
+#    } else {
+#        return ($today->year - $self->birthday->year) - 1;
+#    }
 }
 
 sub _datetime_from_date {
