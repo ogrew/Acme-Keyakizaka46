@@ -107,6 +107,8 @@ member of Keyakizaka46.
 
 =head1 ACCESSORS
 
+=over 4
+
 =item * name_ja
 
 =item * first_name_ja
@@ -132,6 +134,8 @@ member of Keyakizaka46.
 =item * center
 
 =item * age
+
+=back
 
 =head1 SEE ALSO
 

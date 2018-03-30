@@ -239,8 +239,6 @@ L<http://search.cpan.org/~twogmon/Acme-Nogizaka46-0.3/lib/Acme/Nogizaka46.pm>
 
 Okawara Ayato E<lt>2044taiga@gmail.comE<gt>
 
-=back
-
 =head1 LICENSE
 
 Copyright (C) Okwara Ayato.

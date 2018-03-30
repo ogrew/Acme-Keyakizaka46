@@ -1,7 +1,7 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "All about Japanse idol group \"Keyakizaka46\"",
    "author" : [
-      "tearon4 <okawara-ayato@kayac.com>"
+      "Okawara Ayato <2044taiga@gmail.com>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.0.16, CPAN::Meta::Converter version 2.143240",
@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "Keyakizaka46",
+   "name" : "Acme-Keyakizaka46",
    "no_index" : {
       "directory" : [
          "t",
@@ -42,6 +42,8 @@
       },
       "runtime" : {
          "requires" : {
+            "Class::Accessor" : "0",
+            "DateTime" : "0",
             "perl" : "5.008001"
          }
       },
@@ -52,5 +54,19 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01"
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tearon4/Acme-Keyakizaka46/issues"
+      },
+      "homepage" : "https://github.com/tearon4/Acme-Keyakizaka46",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tearon4/Acme-Keyakizaka46.git",
+         "web" : "https://github.com/tearon4/Acme-Keyakizaka46"
+      }
+   },
+   "version" : "0.0.1",
+   "x_contributors" : [
+      "tearon4 <okawara-ayato@kayac.com>"
+   ]
 }
