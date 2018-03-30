@@ -50,19 +50,6 @@ my @members = qw(
     MihoWatanabe
 );
 
-#my %date_joined = map {
-#    my ($class, $year, $month, $day) = ($_ =~ /(\w+):(\d{4})-(\d{2})-(\d{2})/);
-#    $class => DateTime->new(
-#         year  => $year,
-#         month => $month,
-#         day   => $day,
-#    );
-#} qw(
-#    1:2011-08-21
-#    2:2013-05-11
-#    MatsuiRena:2014-02-24
-#);
-
 sub new {
     my $class = shift;
     my $self  = bless {members => []}, $class;
@@ -72,7 +59,7 @@ sub new {
     return $self;
 }
 
-sub members {
+sub team_members {
     my ($self, $type, @members) = @_;
     @members = @{$self->{members}} unless @members;
 
@@ -82,7 +69,7 @@ sub members {
         return grep {$_->team eq 'kanji'} @members;
     }
     elsif ($type eq 'hiragana') {
-        return grep {$_->team eq 'hiragana'}  @members;
+        return grep {$_->team eq 'hiragana'} @members;
     }
 
     return @members;
