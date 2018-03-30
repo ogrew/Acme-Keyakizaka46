@@ -92,7 +92,10 @@ sub select {
     $self->_die('invalid operator was passed in')
         unless grep {$operator eq $_} qw(== >= <= > < eq ne);
 
-    @members = $self->members unless @members;
+    @members = $self->team_members() unless @members;
+
+    $num_or_str = $num_or_str ? $num_or_str : "";
+    $operator   = $operator   ? $operator   : "==";
 
     my $compare = eval "(sub { \$num_or_str $operator \$_[0] })";
     return grep { $compare->($_->$type) } @members;
