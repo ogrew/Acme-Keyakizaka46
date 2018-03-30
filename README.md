@@ -15,8 +15,8 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
   my @hiragana_members     = $keyaki->members('hiragana');
 
   # retrieve the members under some conditions
-  my @sorted_by_age        = $keyaki->sort('age', 1);
-  my @sorted_by_class      = $keyaki->sort('class', 1);
+  my @sorted_by_age        = $keyaki->sort('age', 'asc');
+  my @desc_sorted_by_class = $keyaki->sort('class', 'desc');
   my @selected_by_age      = $keyaki->select('age', 18, '>=');
   my @selected_by_class    = $keyaki->select('class', 2, '==');
 ```
