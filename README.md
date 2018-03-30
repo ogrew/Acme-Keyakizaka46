@@ -4,16 +4,15 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
 
 # SYNOPSIS
 
-```
+```perl
   use Acme::Keyakizaka46;
 
   my $keyaki = Acme::Keyakizaka46->new;
 
   # retrieve the members on their activities
-  my @members              = $keyaki->members;             # retrieve all
+  my @members              = $keyaki->members;
   my @kanji_members        = $keyaki->members('kanji');
   my @hiragana_members     = $keyaki->members('hiragana');
-  my @at_some_time_members = $keyaki->members(DateTime->now->subtract(years => 5));
 
   # retrieve the members under some conditions
   my @sorted_by_age        = $keyaki->sort('age', 1);
@@ -32,18 +31,18 @@ with Keyakizaka46.
 
 ## new
 
-```
+```perl
   my $keyaki = Acme::Keyakizaka46->new;
 ```
 Creates and returns a new Acme::Keyakizaka46 object.
 
 ## members ( $type )
 
-```
+```perl
   # $type can be one of the values below:
-  #  + kanji               : kanji Keyaki members
-  #  + hiragana            : hiragana Keyaki members
-  #  + undef               : all members
+  #  + kanji               : KANJI KEYAKI MEMBERS
+  #  + hiragana            : HIRAGANA KEYAKI MEMBERS
+  #  + undef               : ALL MEMBERS
 
   my @members = $keyaki->members('kanji');
 ```
@@ -53,7 +52,7 @@ based object represents each member.
 
 ## sort ( $type, $order [ , @members ] )
 
-```
+```perl
   # $type can be one of the values below:
   #  + age   :  sort by age
   #  + class :  sort by class
@@ -62,14 +61,14 @@ based object represents each member.
   #  + desc                :  sort in descending order
   #  + asc (anything else) :  sort in ascending order
 
-  my @sorted_members = $keyaki->sort('age', 1); # sort by age in descending order
+  my @sorted_members = $keyaki->sort('age', 'desc'); # sort by age in descending order
 ```
 
 Returns the members sorted by the `$type` field.
 
 ## select ( $type, $number, $operator [, @members] )
 
-```
+```perl
   # $type can be one of the same values above:
   my @selected_members = $keyaki->select('age', 18, '>=');
 ```
@@ -78,7 +77,8 @@ Returns the members satisfy the given `$type` condition. `$operator`
 must be a one of `'==', '>=', '<=', '>', '<'`.
 
 This method compares the given `$type` to the member's one in the order below:
-```
+
+```perl
   $number $operator $member_value
 ```
 
