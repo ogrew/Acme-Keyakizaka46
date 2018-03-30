@@ -7,18 +7,18 @@ use base qw(Acme::Keyakizaka46::Base);
 
 sub info {
     return (
-		first_name_en => 	'Yuuka',
-		family_name_en => 	'Sugai',
-		first_name_ja => 	'友香',
-		family_name_ja => 	'菅井',
-		birthday　=> 	'1995-11-29',
-		zodiac_sign　=> 	'いて座',
-		height　=> 	'166',
-		hometown　=> 	'東京',
-		blood_type　=> 	'AB',
-		team　=> 	'kanji',
-		class　=> 	'1',
-		center => 	undef,
+        first_name_en => 'Yuuka',
+        family_name_en => 'Sugai',
+        first_name_ja => '友香',
+        family_name_ja => '菅井',
+        birthday => '19951129',
+        zodiac_sign => 'いて座',
+        height => '166',
+        hometown => '東京',
+        blood_type => 'AB',
+        team => 'kanji',
+        class => '1',
+        center => undef,
     );
 }
 

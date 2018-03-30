@@ -7,18 +7,18 @@ use base qw(Acme::Keyakizaka46::Base);
 
 sub info {
     return (
-		first_name_en => 	'Mana',
-		family_name_en => 	'Takase',
-		first_name_ja => 	'愛奈',
-		family_name_ja => 	'高瀬',
-		birthday　=> 	'1998-09-20',
-		zodiac_sign　=> 	'おとめ座',
-		height　=> 	'157',
-		hometown　=> 	'大阪',
-		blood_type　=> 	'A',
-		team　=> 	'hiragana',
-		class　=> 	'1',
-		center => 	undef,
+        first_name_en => 'Mana',
+        family_name_en => 'Takase',
+        first_name_ja => '愛奈',
+        family_name_ja => '高瀬',
+        birthday => '19980920',
+        zodiac_sign => 'おとめ座',
+        height => '157',
+        hometown => '大阪',
+        blood_type => 'A',
+        team => 'hiragana',
+        class => '1',
+        center => undef,
     );
 }
 

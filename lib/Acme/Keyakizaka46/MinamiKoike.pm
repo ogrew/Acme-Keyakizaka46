@@ -7,18 +7,18 @@ use base qw(Acme::Keyakizaka46::Base);
 
 sub info {
     return (
-		first_name_en => 	'Minami',
-		family_name_en => 	'Koike',
-		first_name_ja => 	'美波',
-		family_name_ja => 	'小池',
-		birthday　=> 	'1998-11-14',
-		zodiac_sign　=> 	'さそり座',
-		height　=> 	'159',
-		hometown　=> 	'兵庫',
-		blood_type　=> 	'B',
-		team　=> 	'kanji',
-		class　=> 	'1',
-		center => 	undef,
+        first_name_en => 'Minami',
+        family_name_en => 'Koike',
+        first_name_ja => '美波',
+        family_name_ja => '小池',
+        birthday => '19981114',
+        zodiac_sign => 'さそり座',
+        height => '159',
+        hometown => '兵庫',
+        blood_type => 'B',
+        team => 'kanji',
+        class => '1',
+        center => undef,
     );
 }
 

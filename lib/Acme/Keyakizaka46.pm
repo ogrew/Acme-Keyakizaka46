@@ -76,11 +76,13 @@ sub members {
     my ($self, $type, @members) = @_;
     @members = @{$self->{members}} unless @members;
 
+    $type = $type ? $type : '';
+
     if ($type eq 'kanji') {
-        return grep {!$_->graduate_date} @members;
+        return grep {$_->team eq 'kanji'} @members;
     }
     elsif ($type eq 'hiragana') {
-        return grep {$_->graduate_date}  @members;
+        return grep {$_->team eq 'hiragana'}  @members;
     }
 
     return @members;

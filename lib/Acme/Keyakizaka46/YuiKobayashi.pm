@@ -7,18 +7,18 @@ use base qw(Acme::Keyakizaka46::Base);
 
 sub info {
     return (
-		first_name_en => 	'Yui',
-		family_name_en => 	'Kobayashi',
-		first_name_ja => 	'由依',
-		family_name_ja => 	'小林',
-		birthday　=> 	'1999-10-23',
-		zodiac_sign　=> 	'てんびん座',
-		height　=> 	'162',
-		hometown　=> 	'埼玉',
-		blood_type　=> 	'A',
-		team　=> 	'kanji',
-		class　=> 	'1',
-		center => 	undef,
+        first_name_en => 'Yui',
+        family_name_en => 'Kobayashi',
+        first_name_ja => '由依',
+        family_name_ja => '小林',
+        birthday => '19991023',
+        zodiac_sign => 'てんびん座',
+        height => '162',
+        hometown => '埼玉',
+        blood_type => 'A',
+        team => 'kanji',
+        class => '1',
+        center => undef,
     );
 }
 

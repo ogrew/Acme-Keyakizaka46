@@ -7,18 +7,18 @@ use base qw(Acme::Keyakizaka46::Base);
 
 sub info {
     return (
-		first_name_en => 	'Nao',
-		family_name_en => 	'Kosaka',
-		first_name_ja => 	'菜緒',
-		family_name_ja => 	'小坂',
-		birthday　=> 	'2002-09-07',
-		zodiac_sign　=> 	'おとめ座',
-		height　=> 	'159',
-		hometown　=> 	'大阪',
-		blood_type　=> 	'O',
-		team　=> 	'hiragana',
-		class　=> 	'2',
-		center => 	undef,
+        first_name_en => 'Nao',
+        family_name_en => 'Kosaka',
+        first_name_ja => '菜緒',
+        family_name_ja => '小坂',
+        birthday => '20020907',
+        zodiac_sign => 'おとめ座',
+        height => '159',
+        hometown => '大阪',
+        blood_type => 'O',
+        team => 'hiragana',
+        class => '2',
+        center => undef,
     );
 }
 

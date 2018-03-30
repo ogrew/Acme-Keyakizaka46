@@ -6,19 +6,21 @@ use DateTime;
 use base qw(Class::Accessor);
 
 __PACKAGE__->mk_accessors(qw(
-    name_en
-    first_name_en
-    family_name_en
-    name_ja
-    first_name_ja
-    family_name_ja
-    birthday
-    height
-    hometown
-    blood_type
-    class
-    center
-    age
+        first_name_en
+        family_name_en
+        first_name_ja
+        family_name_ja
+        birthday
+        zodiac_sign
+        height
+        hometown
+        blood_type
+        team
+        class
+        center
+        name_ja
+        name_en
+        age
 ));
 
 sub new {
@@ -44,33 +46,10 @@ sub _initialize {
 
 sub _calculate_age {
     my $self  = shift;
-    my $birthday = $self->birthday->format('Ymd');
-    my $today = DateTime->today->format('Ymd');
+    my $today = DateTime->today->ymd('');
+    my $birthday = $self->birthday;
 
-    return (int)(($today-$birthday)/10000);
-
-#    if (($today->month - $self->birthday->month) > 0) {
-#        return $today->year - $self->birthday->year;
-#    } elsif (($today->month - $self->birthday->month) == 0) {
-#        if (($today->day - $self->birthday->day  ) >= 0) {
-#            return $today->year - $self->birthday->year;
-#        } else {
-#            return ($today->year - $self->birthday->year) - 1;
-#        }
-#    } else {
-#        return ($today->year - $self->birthday->year) - 1;
-#    }
-}
-
-sub _datetime_from_date {
-    my ($self, $date) = @_;
-    my ($year, $month, $day) = ($date =~ /(\d{4})-(\d{2})-(\d{2})/);
-
-    DateTime->new(
-        year  => $year,
-        month => $month,
-        day   => $day,
-    );
+    return int(($today-$birthday)/10000);
 }
 
 1;
