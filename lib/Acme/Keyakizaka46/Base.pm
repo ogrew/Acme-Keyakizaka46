@@ -80,7 +80,7 @@ member of Keyakizaka46.
 
   # retrieve the members as a list of
   # Acme::Keyakizaka46::Base based objects
-  my @members = $keyaki->members;
+  my @members = $keyaki->team_members;
 
   for my $member (@members) {
       my $name_en        = $member->name_en;

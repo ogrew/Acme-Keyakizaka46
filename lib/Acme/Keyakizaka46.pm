@@ -141,14 +141,13 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
   my $keyaki = Acme::Keyakizaka46->new;
 
   # retrieve the members on their activities
-  my @members              = $keyaki->members;             # retrieve all
-  my @kanji_members        = $keyaki->members('kanji');
-  my @hiragana_members     = $keyaki->members('hiragana');
-  my @at_some_time_members = $keyaki->members(DateTime->now->subtract(years => 5));
+  my @members              = $keyaki->team_members;             # retrieve all
+  my @kanji_members        = $keyaki->team_members('kanji');
+  my @hiragana_members     = $keyaki->team_members('hiragana');
 
   # retrieve the members under some conditions
-  my @sorted_by_age        = $keyaki->sort('age', 1);
-  my @sorted_by_class      = $keyaki->sort('class', 1);
+  my @sorted_by_age        = $keyaki->sort('age', 'asc');
+  my @sorted_by_class      = $keyaki->sort('class','desc');
   my @selected_by_age      = $keyaki->select('age', 18, '>=');
   my @selected_by_class    = $keyaki->select('class', 2, '==');
 
@@ -179,7 +178,7 @@ Creates and returns a new Acme::Keyakizaka46 object.
   #  + hiragana            : hiragana Keyaki members
   #  + undef               : all members
 
-  my @members = $keyaki->members('kanji');
+  my @members = $keyaki->team_members('kanji');
 
 Returns the members as a list of the L<Acme::Keyakizaka46::Base>
 based object represents each member. See also the documentation of
@@ -199,7 +198,7 @@ L<Acme::Keyakizaka46::Base> for more details.
   #  + desc                :  sort in descending order
   #  + asc (anything else) :  sort in ascending order
 
-  my @sorted_members = $keyaki->sort('age', 1); # sort by age in descending order
+  my @sorted_members = $keyaki->sort('age','desc'); # sort by age in descending order
 
 Returns the members sorted by the I<$type> field.
 
@@ -227,6 +226,10 @@ the given I<$type> to the member's one in the order below:
 =item * Keyakizaka46 (Official Site)
 
 L<http://www.keyakizaka46.com/>
+
+=item * Acme::Nogizaka46
+
+L<http://search.cpan.org/~twogmon/Acme-Nogizaka46-0.3/lib/Acme/Nogizaka46.pm>
 
 =back
 

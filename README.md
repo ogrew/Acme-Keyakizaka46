@@ -10,9 +10,9 @@ Acme::Keyakizaka46 - All about Japanse idol group "Keyakizaka46"
   my $keyaki = Acme::Keyakizaka46->new;
 
   # retrieve the members on their activities
-  my @members              = $keyaki->members;
-  my @kanji_members        = $keyaki->members('kanji');
-  my @hiragana_members     = $keyaki->members('hiragana');
+  my @members              = $keyaki->team_members;
+  my @kanji_members        = $keyaki->team_members('kanji');
+  my @hiragana_members     = $keyaki->team_members('hiragana');
 
   # retrieve the members under some conditions
   my @sorted_by_age        = $keyaki->sort('age', 'asc');
@@ -44,7 +44,7 @@ Creates and returns a new Acme::Keyakizaka46 object.
   #  + hiragana            : HIRAGANA KEYAKI MEMBERS
   #  + undef               : ALL MEMBERS
 
-  my @members = $keyaki->members('kanji');
+  my @members = $keyaki->team_members('kanji');
 ```
 
 Returns the members as a list of the `Acme::Keyakizaka46::Base`
