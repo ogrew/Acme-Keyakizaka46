@@ -85,7 +85,9 @@ sub info {
 
         if j == 0:      # birtyday
             dt = datetime.strptime(data, '%Y年%m月%d日')
-            data = dt.strftime("%Y%m%d")
+            data = dt.strftime("%Y-%m-%d")
+            personal_f.write("        " + topic[j] + " => $_[0]->_datetime_from_date('" + data + "'),\n")
+            continue
         elif j == 4:    # blood_type:「型」を抜きたい
             data = data[:-1]
         elif j == 2:    # height:「cm」を抜きたい

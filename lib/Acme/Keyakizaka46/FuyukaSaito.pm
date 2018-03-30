@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Saito',
         first_name_ja => '冬優花',
         family_name_ja => '齋藤',
-        birthday => '19980215',
+        birthday => $_[0]->_datetime_from_date('1998-02-15'),
         zodiac_sign => 'みずがめ座',
         height => '157',
         hometown => '東京',

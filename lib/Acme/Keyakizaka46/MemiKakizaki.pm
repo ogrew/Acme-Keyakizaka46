@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Kakizaki',
         first_name_ja => '芽実',
         family_name_ja => '柿崎',
-        birthday => '20011202',
+        birthday => $_[0]->_datetime_from_date('2001-12-02'),
         zodiac_sign => 'いて座',
         height => '157',
         hometown => '長野',

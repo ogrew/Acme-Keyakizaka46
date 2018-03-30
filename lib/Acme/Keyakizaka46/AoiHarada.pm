@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Harada',
         first_name_ja => '葵',
         family_name_ja => '原田',
-        birthday => '20000507',
+        birthday => $_[0]->_datetime_from_date('2000-05-07'),
         zodiac_sign => 'おうし座',
         height => '156',
         hometown => '東京',

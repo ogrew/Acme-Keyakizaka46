@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Nagahama',
         first_name_ja => 'ねる',
         family_name_ja => '長濱',
-        birthday => '19980904',
+        birthday => $_[0]->_datetime_from_date('1998-09-04'),
         zodiac_sign => 'おとめ座',
         height => '159',
         hometown => '長崎',

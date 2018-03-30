@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Moriya',
         first_name_ja => '茜',
         family_name_ja => '守屋',
-        birthday => '19971112',
+        birthday => $_[0]->_datetime_from_date('1997-11-12'),
         zodiac_sign => 'さそり座',
         height => '164',
         hometown => '宮城',

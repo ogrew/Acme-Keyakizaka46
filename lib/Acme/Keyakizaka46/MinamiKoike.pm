@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Koike',
         first_name_ja => '美波',
         family_name_ja => '小池',
-        birthday => '19981114',
+        birthday => $_[0]->_datetime_from_date('1998-11-14'),
         zodiac_sign => 'さそり座',
         height => '159',
         hometown => '兵庫',

@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Kosaka',
         first_name_ja => '菜緒',
         family_name_ja => '小坂',
-        birthday => '20020907',
+        birthday => $_[0]->_datetime_from_date('2002-09-07'),
         zodiac_sign => 'おとめ座',
         height => '159',
         hometown => '大阪',

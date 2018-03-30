@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Kageyama',
         first_name_ja => '優佳',
         family_name_ja => '影山',
-        birthday => '20010508',
+        birthday => $_[0]->_datetime_from_date('2001-05-08'),
         zodiac_sign => 'おうし座',
         height => '156',
         hometown => '東京',

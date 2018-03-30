@@ -77,9 +77,9 @@ sub team_members {
 
 sub sort {
     my ($self, $type, $order, @members) = @_;
-    @members = $self->members unless @members;
+    @members = $self->team_members() unless @members;
 
-    if ($order == 'desc') {
+    if ($order eq 'desc') {
         return sort {$b->$type <=> $a->$type} @members;
     } else {
         return sort {$a->$type <=> $b->$type} @members;
@@ -89,16 +89,23 @@ sub sort {
 sub select {
     my ($self, $type, $num_or_str, $operator, @members) = @_;
 
-    $self->_die('invalid operator was passed in')
-        unless grep {$operator eq $_} qw(== >= <= > < eq ne);
-
     @members = $self->team_members() unless @members;
 
-    $num_or_str = $num_or_str ? $num_or_str : "";
-    $operator   = $operator   ? $operator   : "==";
+    if ($type eq 'center') {
+        $self->_die('too many args...')
+            if ($num_or_str || $operator);
 
-    my $compare = eval "(sub { \$num_or_str $operator \$_[0] })";
-    return grep { $compare->($_->$type) } @members;
+        return grep {$_->{name_en} eq 'Yurina Hirate'} @members;
+    }
+    else {
+        $self->_die('invalid operator was passed in')
+            unless grep {$operator eq $_} qw(== >= <= > < eq ne);
+
+        my $compare = eval "(sub { \$num_or_str $operator \$_[0] })";
+
+        return grep { $compare->($_->$type) } @members;
+    }
+
 }
 
 sub _initialize {

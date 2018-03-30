@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Miyata',
         first_name_ja => '愛萌',
         family_name_ja => '宮田',
-        birthday => '19980428',
+        birthday => $_[0]->_datetime_from_date('1998-04-28'),
         zodiac_sign => 'おうし座',
         height => '158',
         hometown => '東京',

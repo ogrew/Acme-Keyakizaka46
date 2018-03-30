@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Yonetani',
         first_name_ja => '奈々未',
         family_name_ja => '米谷',
-        birthday => '20000224',
+        birthday => $_[0]->_datetime_from_date('2000-02-24'),
         zodiac_sign => 'うお座',
         height => '159',
         hometown => '大阪',

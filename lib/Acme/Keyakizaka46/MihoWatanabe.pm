@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Watanabe',
         first_name_ja => '美穂',
         family_name_ja => '渡邉',
-        birthday => '20000224',
+        birthday => $_[0]->_datetime_from_date('2000-02-24'),
         zodiac_sign => 'うお座',
         height => '158',
         hometown => '埼玉',

@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Higashimura',
         first_name_ja => '芽依',
         family_name_ja => '東村',
-        birthday => '19980823',
+        birthday => $_[0]->_datetime_from_date('1998-08-23'),
         zodiac_sign => 'おとめ座',
         height => '153',
         hometown => '奈良',

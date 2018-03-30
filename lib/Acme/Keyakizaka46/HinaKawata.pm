@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Kawata',
         first_name_ja => '陽菜',
         family_name_ja => '河田',
-        birthday => '20010723',
+        birthday => $_[0]->_datetime_from_date('2001-07-23'),
         zodiac_sign => 'しし座',
         height => '153',
         hometown => '山口',

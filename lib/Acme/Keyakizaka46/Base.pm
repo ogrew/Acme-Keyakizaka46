@@ -47,9 +47,20 @@ sub _initialize {
 sub _calculate_age {
     my $self  = shift;
     my $today = DateTime->today->ymd('');
-    my $birthday = $self->birthday;
+    my $birthday = $self->birthday->ymd('');
 
     return int(($today-$birthday)/10000);
+}
+
+sub _datetime_from_date {
+    my ($self, $date) = @_;
+    my ($year, $month, $day) = ($date =~ /(\d{4})-(\d{2})-(\d{2})/);
+
+    DateTime->new(
+        year  => $year,
+        month => $month,
+        day   => $day,
+    );
 }
 
 1;

@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Takase',
         first_name_ja => '愛奈',
         family_name_ja => '高瀬',
-        birthday => '19980920',
+        birthday => $_[0]->_datetime_from_date('1998-09-20'),
         zodiac_sign => 'おとめ座',
         height => '157',
         hometown => '大阪',

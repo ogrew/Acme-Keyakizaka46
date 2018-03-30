@@ -13,8 +13,7 @@ for my $member (@members) {
     ok $member->first_name_ja,                          '  first_name_ja()';
     ok $member->family_name_ja,                         '  family_name_ja()';
     ok $member->name_ja,                                '  name_ja()';
-    ok $member->birthday               
-        && $member->birthday =~ /\d{8}/,                '  birthday()';
+    ok $member->birthday->isa('DateTime'),              '  birthday()';
     ok $member->age 
         && $member->age =~ /\d{2}/,                     '  age()';
     ok $member->zodiac_sign,                            '  zodiac_sign()';

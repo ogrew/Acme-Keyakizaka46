@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Ishimori',
         first_name_ja => '虹花',
         family_name_ja => '石森',
-        birthday => '19970507',
+        birthday => $_[0]->_datetime_from_date('1997-05-07'),
         zodiac_sign => 'おうし座',
         height => '162',
         hometown => '宮城',

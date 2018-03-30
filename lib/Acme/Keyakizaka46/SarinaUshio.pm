@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Ushio',
         first_name_ja => '紗理菜',
         family_name_ja => '潮',
-        birthday => '19971226',
+        birthday => $_[0]->_datetime_from_date('1997-12-26'),
         zodiac_sign => 'やぎ座',
         height => '157',
         hometown => '神奈川',

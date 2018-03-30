@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Shida',
         first_name_ja => '愛佳',
         family_name_ja => '志田',
-        birthday => '19981123',
+        birthday => $_[0]->_datetime_from_date('1998-11-23'),
         zodiac_sign => 'いて座',
         height => '167',
         hometown => '新潟',

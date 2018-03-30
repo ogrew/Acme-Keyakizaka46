@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Hamagishi',
         first_name_ja => 'ひより',
         family_name_ja => '濱岸',
-        birthday => '20020928',
+        birthday => $_[0]->_datetime_from_date('2002-09-28'),
         zodiac_sign => 'てんびん座',
         height => '166',
         hometown => '福岡',

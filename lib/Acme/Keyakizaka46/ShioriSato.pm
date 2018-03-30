@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Sato',
         first_name_ja => '詩織',
         family_name_ja => '佐藤',
-        birthday => '19961116',
+        birthday => $_[0]->_datetime_from_date('1996-11-16'),
         zodiac_sign => 'さそり座',
         height => '161',
         hometown => '東京',

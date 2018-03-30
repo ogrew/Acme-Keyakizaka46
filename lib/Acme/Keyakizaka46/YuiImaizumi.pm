@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Imaizumi',
         first_name_ja => '佑唯',
         family_name_ja => '今泉',
-        birthday => '19980930',
+        birthday => $_[0]->_datetime_from_date('1998-09-30'),
         zodiac_sign => 'てんびん座',
         height => '153',
         hometown => '神奈川',

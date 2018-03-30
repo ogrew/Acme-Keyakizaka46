@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Sugai',
         first_name_ja => '友香',
         family_name_ja => '菅井',
-        birthday => '19951129',
+        birthday => $_[0]->_datetime_from_date('1995-11-29'),
         zodiac_sign => 'いて座',
         height => '166',
         hometown => '東京',

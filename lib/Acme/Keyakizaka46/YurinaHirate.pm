@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Hirate',
         first_name_ja => '友梨奈',
         family_name_ja => '平手',
-        birthday => '20010625',
+        birthday => $_[0]->_datetime_from_date('2001-06-25'),
         zodiac_sign => 'かに座',
         height => '165',
         hometown => '愛知',

@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Oda',
         first_name_ja => '奈那',
         family_name_ja => '織田',
-        birthday => '19980604',
+        birthday => $_[0]->_datetime_from_date('1998-06-04'),
         zodiac_sign => 'ふたご座',
         height => '162',
         hometown => '静岡',

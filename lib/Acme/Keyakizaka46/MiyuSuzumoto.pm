@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Suzumoto',
         first_name_ja => '美愉',
         family_name_ja => '鈴本',
-        birthday => '19971205',
+        birthday => $_[0]->_datetime_from_date('1997-12-05'),
         zodiac_sign => 'いて座',
         height => '156',
         hometown => '愛知',

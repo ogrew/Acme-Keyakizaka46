@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Nagasawa',
         first_name_ja => '菜々香',
         family_name_ja => '長沢',
-        birthday => '19970423',
+        birthday => $_[0]->_datetime_from_date('1997-04-23'),
         zodiac_sign => 'おうし座',
         height => '158',
         hometown => '山形',

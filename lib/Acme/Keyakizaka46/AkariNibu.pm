@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Nibu',
         first_name_ja => '明里',
         family_name_ja => '丹生',
-        birthday => '20010215',
+        birthday => $_[0]->_datetime_from_date('2001-02-15'),
         zodiac_sign => 'みずがめ座',
         height => '154',
         hometown => '埼玉',

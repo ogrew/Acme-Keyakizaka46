@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Uemura',
         first_name_ja => '莉菜',
         family_name_ja => '上村',
-        birthday => '19970104',
+        birthday => $_[0]->_datetime_from_date('1997-01-04'),
         zodiac_sign => 'やぎ座',
         height => '152',
         hometown => '千葉',

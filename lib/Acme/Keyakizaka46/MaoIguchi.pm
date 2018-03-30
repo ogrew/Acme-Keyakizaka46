@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Iguchi',
         first_name_ja => '眞緒',
         family_name_ja => '井口',
-        birthday => '19951110',
+        birthday => $_[0]->_datetime_from_date('1995-11-10'),
         zodiac_sign => 'さそり座',
         height => '163',
         hometown => '新潟',

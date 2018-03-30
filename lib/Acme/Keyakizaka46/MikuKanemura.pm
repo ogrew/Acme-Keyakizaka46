@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Kanemura',
         first_name_ja => '美玖',
         family_name_ja => '金村',
-        birthday => '20020910',
+        birthday => $_[0]->_datetime_from_date('2002-09-10'),
         zodiac_sign => 'おとめ座',
         height => '161',
         hometown => '埼玉',

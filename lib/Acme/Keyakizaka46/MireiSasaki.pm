@@ -11,7 +11,7 @@ sub info {
         family_name_en => 'Sasaki',
         first_name_ja => '美玲',
         family_name_ja => '佐々木',
-        birthday => '19991217',
+        birthday => $_[0]->_datetime_from_date('1999-12-17'),
         zodiac_sign => 'いて座',
         height => '164',
         hometown => '兵庫',
